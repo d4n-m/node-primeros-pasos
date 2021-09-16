@@ -3,6 +3,7 @@ import cows from 'cows';
 import superb from 'superb';
 import os from 'os';
 import http from 'http';
+import fs from 'fs';
 
 function getRandomArbitrary(min, max) {
     return Math.floor(Math.random() * (max - min)) + min
@@ -11,7 +12,13 @@ function getRandomArbitrary(min, max) {
 console.log('\n' + chalk.blue('Hello ') + chalk.grey(superb.random()) +  chalk.red(' World!') + '\n');
 
 let cow_array = cows();
-console.log(chalk.red(cow_array[getRandomArbitrary(1, 399)]));
+let cow = cow_array[getRandomArbitrary(1, 399)];
+console.log(chalk.red(cow));
+
+fs.appendFile('cow.txt', cow, function(error) {
+    if(error){console.log('se ha producido un error');}
+  }
+);
 
 http.createServer(function (req, res) {
   var html = buildHtml(req);
