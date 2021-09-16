@@ -1,4 +1,6 @@
-require('dotenv').config();
+// require('dotenv').config();
+import dotenv from 'dotenv';
+dotenv.config();
 
 console.log(process.arch);
 
@@ -13,4 +15,4 @@ console.log(process.env.USER_ID);
 process.stdout.write('Hola Mundo!!');
 //process.stdin();
 
-console.log('log');
+console.log('\nlog');
