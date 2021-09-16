@@ -13,3 +13,4 @@ console.log(process.env.USER_ID);
 process.stdout.write('Hola Mundo!!');
 //process.stdin();
 
+console.log('log');

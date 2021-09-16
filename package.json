@@ -1,5 +1,27 @@
 {
   "dependencies": {
-    "dotenv": "^10.0.0"
-  }
+    "chalk": "^4.1.2",
+    "cows": "^2.1.1",
+    "dotenv": "^10.0.0",
+    "http": "^0.0.1-security",
+    "superb": "^4.0.0"
+  },
+  "name": "primeros-pasos",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/d4n-m/node-primeros-pasos.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/d4n-m/node-primeros-pasos/issues"
+  },
+  "homepage": "https://github.com/d4n-m/node-primeros-pasos#readme",
+  "description": ""
 }
