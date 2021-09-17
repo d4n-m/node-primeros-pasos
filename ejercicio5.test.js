@@ -11,6 +11,11 @@ describe('Test CapitaliseFirstWord()', () => {
       let string = "afasfsafdsf..";
       expect(CapitaliseFirstWord(string)[0]).toBe('A');
     });
+   
+  test('Remove extra spaces.', () => {
+    let string = "   Once   upon  a time..";
+    expect(CapitaliseFirstWord(string)).toBe('Once upon a time..');
+  });
 });
 
 describe('Test CapitalizeFirstLetter()', () => {
@@ -27,7 +32,7 @@ describe('Test MinimaliseText()', () => {
 
   test('ALL CAPS to lower case', () => {
     let string = "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG";
-    console.log('MinimaliseText(' + string + ') => ' + MinimaliseText(string));
+    // console.log('MinimaliseText(' + string + ') => ' + MinimaliseText(string));
     expect(MinimaliseText(string)[0]).toBe('t');
     expect(MinimaliseText(string)[4]).toBe('q'); 
   });

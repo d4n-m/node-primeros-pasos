@@ -1,5 +1,5 @@
 function CapitaliseFirstWord(string) {
-    
+    string = RemoveExtraSpaces(string);
     string = string.charAt(0).toUpperCase() + string.slice(1);
     
     return string;
@@ -20,6 +20,13 @@ function MinimaliseText(string) {
     string = string.toLowerCase();
 
     return string;
+}
+
+function RemoveExtraSpaces(string) {
+
+    let newString = string.replace(/\s+/g,' ').trim();
+
+    return newString;
 }
 
 export { CapitaliseFirstWord, CapitaliseFirstLetter, MinimaliseText }
