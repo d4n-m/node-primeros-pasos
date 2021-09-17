@@ -1,4 +1,4 @@
-import { CapitaliseFirstWord, CapitaliseFirstLetter, MinimaliseText } from './ejercicio5.js';
+import { CapitaliseFirstWord, CapitaliseFirstLetter, MinimaliseText, RemoveExtraSpaces } from './ejercicio5.js';
 
 describe('Test CapitaliseFirstWord()', () => {
     
@@ -14,7 +14,7 @@ describe('Test CapitaliseFirstWord()', () => {
    
   test('Remove extra spaces.', () => {
     let string = "   Once   upon  a time..";
-    expect(CapitaliseFirstWord(string)).toBe('Once upon a time..');
+    expect(RemoveExtraSpaces(string)).toBe('Once upon a time..');
   });
 });
 
