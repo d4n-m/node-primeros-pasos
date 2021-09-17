@@ -1,28 +1,46 @@
-function CapitaliseFirstWord(string) {
-
-    string = string.charAt(0).toUpperCase() + string.slice(1);
-    return string;
+function CapitaliseFirstWord(text) {
+    text = text.charAt(0).toUpperCase() + text.slice(1);
+    return text;
 }
 
-function CapitaliseFirstLetter(string) {
-
-    string =  string.toLowerCase()
+function CapitaliseFirstLetter(text) {
+    text =  text.toLowerCase()
               .split(' ')
               .map((s) => s.charAt(0).toUpperCase() + s.substring(1))
               .join(' ');
-    return string;
+    return text;
 } 
 
-function MinimaliseText(string) {
-
-    string = string.toLowerCase();
-    return string;
+function MinimaliseText(text) {
+    text = text.toLowerCase();
+    return text;
 }
 
-function RemoveExtraSpaces(string) {
+function RemoveExtraSpaces(text) {
 
-    let newString = string.replace(/\s+/g,' ').trim();
-    return newString;
+    text = text.replace(/\s+/g,' ').trim();
+    return text;
 }
 
-export { CapitaliseFirstWord, CapitaliseFirstLetter, MinimaliseText, RemoveExtraSpaces }
+function Capitalise(text){
+    text = RemoveExtraSpaces(
+           CapitaliseFirstWord(text)
+           );
+    return text;
+}
+
+function Minimalise(text) {
+    text = RemoveExtraSpaces(
+           MinimaliseText(text)
+           );
+    return text;    
+}
+
+function WordCasealise(text) {
+    text = RemoveExtraSpaces(
+           CapitaliseFirstLetter(text)
+           );
+    return text;
+}
+
+export { RemoveExtraSpaces, Capitalise, Minimalise, WordCasealise }
